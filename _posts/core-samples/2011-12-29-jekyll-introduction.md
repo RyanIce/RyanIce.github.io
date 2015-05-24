@@ -2,7 +2,7 @@
 layout: post
 category : lessons
 tagline: "Supporting tagline"
-tags : [intro, beginner, jekyll, tutorial]
+tags : intro beginner jekyll tutorial
 ---
 {% include JB/setup %}
 
@@ -18,7 +18,7 @@ dynamic components such as templates, partials, liquid code, markdown, etc. Jeky
 
 ### Examples
 
-This website is created with Jekyll. [Other Jekyll websites](https://github.com/mojombo/jekyll/wiki/Sites).
+This website is created with Jekyll. [Other Jekyll websites][1].
 
 
 
@@ -76,28 +76,28 @@ help you better understand the code examples contained throughout Jekyll-Bootstr
 
 ## Initial Setup
 
-After [installing jekyll](/index.html#start-now) you'll need to format your website directory in a way jekyll expects.
+After [installing jekyll][2] you'll need to format your website directory in a way jekyll expects.
 Jekyll-bootstrap conveniently provides the base directory format.
 
 ### The Jekyll Application Base Format
 
 Jekyll expects your website directory to be laid out like so:
 
-    .
-    |-- _config.yml
-    |-- _includes
-    |-- _layouts
-    |   |-- default.html
-    |   |-- post.html
-    |-- _posts
-    |   |-- 2011-10-25-open-source-is-good.markdown
-    |   |-- 2011-04-26-hello-world.markdown
-    |-- _site
-    |-- index.html
-    |-- assets
-        |-- css
-            |-- style.css
-        |-- javascripts
+	.
+	|-- _config.yml
+	|-- _includes
+	|-- _layouts
+	|   |-- default.html
+	|   |-- post.html
+	|-- _posts
+	|   |-- 2011-10-25-open-source-is-good.markdown
+	|   |-- 2011-04-26-hello-world.markdown
+	|-- _site
+	|-- index.html
+	|-- assets
+	    |-- css
+	        |-- style.css
+	    |-- javascripts
 
 
 - **\_config.yml**
@@ -122,13 +122,13 @@ Jekyll expects your website directory to be laid out like so:
 	The assets folder represents _any generic_ folder you happen to create in your root directory.
 	Directories and files not properly formatted for jekyll will be left untouched for you to serve normally.
 
-(read more: <https://github.com/mojombo/jekyll/wiki/Usage>)
+(read more: [https://github.com/mojombo/jekyll/wiki/Usage][3])
 
 
 ### Jekyll Configuration
 
 Jekyll supports various configuration options that are fully outlined here:
-(<https://github.com/mojombo/jekyll/wiki/Configuration>)
+([https://github.com/mojombo/jekyll/wiki/Configuration][4])
 
 
 
@@ -151,7 +151,7 @@ Posts are created by properly formatting a file and placing it the `_posts` fold
 **Formatting**
 A post must have a valid filename in the form `YEAR-MONTH-DATE-title.MARKUP` and be placed in the `_posts` directory.
 If the data format is invalid Jekyll will not recognize the file as a post. The date and title are automatically parsed from the filename of the post file.
-Additionally, each file must have [YAML Front-Matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter) prepended to its content.
+Additionally, each file must have [YAML Front-Matter][5] prepended to its content.
 YAML Front-Matter is a valid YAML syntax specifying meta-data for the given file.
 
 **Order**
@@ -172,10 +172,10 @@ Note categories in Jekyll work in a specific way.
 If you define more than one category you are defining a category hierarchy "set".
 Example:
 
-    ---
-    title :  Hello World
-    categories : [lessons, beginner]
-    ---
+	---
+	title :  Hello World
+	categories : [lessons, beginner]
+	---
 
 This defines the category hierarchy "lessons/beginner". Note this is _one category_ node in Jekyll.
 You won't find "lessons" and "beginner" as two separate categories unless you define them elsewhere as singular categories.
@@ -186,7 +186,7 @@ You won't find "lessons" and "beginner" as two separate categories unless you de
 Pages are created by properly formatting a file and placing it anywhere in the root directory or subdirectories that do _not_ start with an underscore.
 
 **Formatting**
-In order to register as a Jekyll page the file must contain [YAML Front-Matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter).
+In order to register as a Jekyll page the file must contain [YAML Front-Matter][6].
 Registering a page means 1) that Jekyll will process the page and 2) that the page object will be available in the `site.pages` array for inclusion into your templates.
 
 **Categories and Tags**
@@ -196,10 +196,10 @@ Pages do not compute categories nor tags so defining them will have no effect.
 If pages are defined in sub-directories, the path to the page will be reflected in the url.
 Example:
 
-    .
-    |-- people
-        |-- bob
-            |-- essay.html
+	.
+	|-- people
+	    |-- bob
+	        |-- essay.html
 
 This page will be available at `http://yourdomain.com/people/bob/essay.html`
 
@@ -239,11 +239,11 @@ Render the content variable wherever you want your main content to be injected i
 <body>
   <div id="sidebar"> ... </div>
   <div id="main">
-    |.{content}.|
+	|.{content}.|
   </div>
 </body>
 ...{% endcapture %}
-{% include JB/liquid_raw %}
+{% include JB/liquid\_raw %}
 
 ### Sub-Templates
 
@@ -266,7 +266,7 @@ This is mainly due to the fact that Jekyll templates must use the Liquid Templat
 
 ### What is Liquid?
 
-[Liquid](https://github.com/Shopify/liquid) is a secure templating language developed by [Shopify](http://shopify.com).
+[Liquid][7] is a secure templating language developed by [Shopify][8].
 Liquid is designed for end-users to be able to execute logic within template files
 without imposing any security risk on the hosting server.
 
@@ -275,7 +275,7 @@ your site and post/page data.
 
 ### Why Do We Have to Use Liquid?
 
-GitHub uses Jekyll to power [GitHub Pages](http://pages.github.com/).
+GitHub uses Jekyll to power [GitHub Pages][9].
 GitHub cannot afford to run arbitrary code on their servers so they lock developers down via Liquid.
 
 ### Liquid is Not Programmer-Friendly.
@@ -295,7 +295,7 @@ suck it up and view it as an opportunity to work around limitations and adopt cl
 **Aside**
 My personal stance is to not invest time trying to hack liquid. It's really unnecessary
 _from a programmer's_ perspective. That is to say if you have the ability to run custom plugins (i.e. run arbitrary ruby code)
-you are better off sticking with ruby. Toward that end I've built [Mustache-with-Jekyll](http://github.com/plusjade/mustache-with-jekyll)
+you are better off sticking with ruby. Toward that end I've built [Mustache-with-Jekyll][10]
 
 
 ## Static Assets
@@ -337,19 +337,19 @@ This is the only way Jekyll knows you want the file processed.
 
 YAML Front Matter must be prepended to the top of template/post/page files:
 
-    ---
-    layout: post
-    category : pages
-    tags : [how-to, jekyll]
-    ---
-
-    ... contents ...
+	---
+	layout: post
+	category : pages
+	tags : [how-to, jekyll]
+	---
+	
+	... contents ...
 
 Three hyphens on a new line start the Front-Matter block and three hyphens on a new line end the block.
 The data inside the block must be valid YAML.
 
 Configuration parameters for YAML Front-Matter is outlined here:
-[A comprehensive explanation of YAML Front Matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter)
+[A comprehensive explanation of YAML Front Matter][11]
 
 #### Defining Layouts for Posts and Templates Parsing.
 
@@ -395,7 +395,7 @@ Remember, in Jekyll you are an end-user. Your API has only two components:
 2. The liquid syntax and variables passed into the liquid templates.
 
 All the data objects available to you in the templates via Liquid are outlined in the **API Section** of Jekyll-Bootstrap.
-You can also read the original documentation here: <https://github.com/mojombo/jekyll/wiki/Template-Data>
+You can also read the original documentation here: [https://github.com/mojombo/jekyll/wiki/Template-Data][12]
 
 ## Conclusion
 
@@ -408,5 +408,18 @@ Jekyll-bootstrap is intended to provide helper methods and strategies aimed at m
 
 ## Next Steps
 
-Please take a look at [{{ site.categories.api.first.title }}]({{ BASE_PATH }}{{ site.categories.api.first.url }})
-or jump right into [Usage]({{ BASE_PATH }}{{ site.categories.usage.first.url }}) if you'd like.
+Please take a look at [{{ site.categories.api.first.title }}]({{ BASE\_PATH }}{{ site.categories.api.first.url }})
+or jump right into [Usage]({{ BASE\_PATH }}{{ site.categories.usage.first.url }}) if you'd like.
+
+[1]:	https://github.com/mojombo/jekyll/wiki/Sites
+[2]:	/index.html#start-now
+[3]:	https://github.com/mojombo/jekyll/wiki/Usage
+[4]:	https://github.com/mojombo/jekyll/wiki/Configuration
+[5]:	https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter
+[6]:	https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter
+[7]:	https://github.com/Shopify/liquid
+[8]:	http://shopify.com
+[9]:	http://pages.github.com/
+[10]:	http://github.com/plusjade/mustache-with-jekyll
+[11]:	https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter
+[12]:	https://github.com/mojombo/jekyll/wiki/Template-Data
