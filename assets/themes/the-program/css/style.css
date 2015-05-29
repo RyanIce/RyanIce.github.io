@@ -401,6 +401,10 @@ Calculation should be done via  http://j.mp/rNg5uA
 No styleguide reference.
 */
 body {
+  background: url('/assets/themes/the-program/skin/100-90-5-monochrome.png');
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-color: #e2e2de;
   font-family: consolas, monaco, monospace;
   font-size: 1em;
   line-height: 1.625em;
